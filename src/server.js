@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 
 import * as userController from "./controller/userController.js";
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.get("/", userController.getUser);
 
